@@ -1,10 +1,10 @@
 # deskwright — Hostinger (LiteSpeed/Apache) config
-# Canonical is https://deskwright.space/  → force HTTPS + strip www to match it.
+# Canonical is https://deskwright.tech/  → force HTTPS + strip www to match it.
 
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^ https://deskwright.space%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://deskwright.tech%{REQUEST_URI} [L,R=301]
 
 # --- Gzip/Brotli compression ---
 <IfModule mod_deflate.c>

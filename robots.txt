@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deskwright.space/sitemap.xml
+Sitemap: https://deskwright.tech/sitemap.xml

@@ -363,3 +363,17 @@ a { color: var(--violet-700); text-decoration: none; }
   .action-log li { opacity: 1 !important; transform: none !important; }
   .btn:hover, .feature-card:hover, .compare-card:hover, .usecase-card:hover { transform: none !important; }
 }
+
+/* Founder LinkedIn link */
+.founder-link{margin-top:14px}
+.founder-link a{display:inline-flex;align-items:center;gap:6px;font-weight:600;
+  color:var(--accent,var(--gold,var(--indigo,#6366f1)));text-decoration:none;
+  border-bottom:1px solid currentColor;padding-bottom:1px}
+.founder-link a:hover{opacity:.8}
+
+/* Responsive hardening */
+img, video, canvas { max-width: 100%; height: auto; }
+svg { max-width: 100%; }
+*, *::before, *::after { min-width: 0; }
+html, body { overflow-x: hidden; }
+pre, code, table { max-width: 100%; overflow-x: auto; }
