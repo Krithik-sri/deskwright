@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deskwright — Computer-Use AI Agents That Drive Your Software</title>
+  <meta name="description" content="Deskwright deploys computer-use AI agents that log in, click, and complete real workflows across your apps. The modern RPA alternative — no API, no brittle scripts." />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://deskwright.space/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Deskwright" />
+  <meta property="og:title" content="Deskwright — Computer-Use AI Agents That Drive Your Software" />
+  <meta property="og:description" content="Computer-use AI agents that operate your real software — web, desktop, legacy. No API, no brittle scripts. The modern RPA alternative." />
+  <meta property="og:url" content="https://deskwright.space/" />
+  <meta property="og:image" content="https://deskwright.space/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f97316'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M11 9l12 7-12 7z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Deskwright",
+    "url": "https://deskwright.space",
+    "logo": "https://deskwright.space/og.png",
+    "description": "Deskwright builds computer-use AI agents that operate the same software your team uses — web, desktop and legacy apps — with no API and no brittle automation scripts.",
+    "founder": {
+      "@type": "Person",
+      "name": "Maharana Sarkar",
+      "jobTitle": "Founder & CEO"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Deskwright",
+    "url": "https://deskwright.space",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://deskwright.space/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Deskwright",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
+    "description": "Computer-use AI agents that drive your existing software to complete real workflows — the modern alternative to brittle RPA.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Starter plan available; usage-based and Enterprise tiers offered."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "126",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is Deskwright different from traditional RPA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Traditional RPA relies on recorded selectors and scripts that break the moment a button moves or a field is renamed. Deskwright uses vision and reasoning to see the screen like a person, so it adapts to UI changes and works on apps that expose no automation hooks at all." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Deskwright need an API for the apps it automates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Deskwright operates software through its real user interface — web, desktop, Citrix, or legacy mainframe terminals. If a human can use it on a screen, the agent can drive it. No integration or API access required." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when a user interface changes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Because Deskwright perceives the screen and reasons about intent rather than memorizing pixel coordinates or DOM paths, it self-heals through most UI changes automatically. When it is genuinely uncertain, it pauses and asks a human instead of failing silently." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you keep our data and credentials secure?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Deskwright runs inside your own VPC or on-premises environment. Credentials are scoped and stored in your secrets manager, sensitive steps require human approval, and every action is captured in a tamper-evident audit log with full session replay." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a human approve actions before they run?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You define approval gates on any step — for example before submitting a payment or modifying a record. The agent pauses, surfaces exactly what it intends to do, and waits for a person to approve, edit, or reject." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to deploy a workflow?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most teams ship their first workflow in days using a pre-built recipe or by describing the goal in plain language. There are no selectors to record or scripts to maintain, so workflows go live faster and stay live longer." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Deskwright home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7c3aed" />
+              <stop offset="1" stop-color="#f97316" />
+            </linearGradient>
+          </defs>
+          <rect width="32" height="32" rx="9" fill="url(#brandGrad)" />
+          <path d="M11 9l12 7-12 7z" fill="#fff" />
+        </svg>
+        <span class="brand-name">Deskwright</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#product">Product</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#use-cases">Use cases</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="#cta">Try it</a>
+        <a class="btn btn-primary" href="#cta">Get a demo</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="product">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Computer-use AI agents</span>
+          <h1>Agents that <span class="grad-text">drive your software</span>.</h1>
+          <p class="lede">Deskwright deploys AI agents that log in, click, type, and complete real workflows across the tools your team already uses — web apps, internal tools, even legacy desktop. No API. No brittle automation scripts.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#cta">Get a demo</a>
+            <a class="btn btn-outline btn-lg" href="#how">See how it works</a>
+          </div>
+          <div class="tagline-strip" role="note">
+            <span class="dot"></span> No APIs. No scripts. Just outcomes.
+          </div>
+        </div>
+
+        <!-- Animated browser + cursor + action log -->
+        <div class="hero-visual reveal" aria-label="Animated demo: a Deskwright agent operating a web app and logging each action" role="img">
+          <div class="browser" aria-hidden="true">
+            <div class="browser-bar">
+              <span class="traffic r"></span><span class="traffic y"></span><span class="traffic g"></span>
+              <span class="url-pill">invoices.app/new</span>
+            </div>
+            <div class="browser-body">
+              <div class="bb-row bb-title"></div>
+              <div class="bb-field"><span class="bb-label">Vendor</span><span class="bb-input typed" data-fill="Northwind Co.">Northwind Co.</span></div>
+              <div class="bb-field"><span class="bb-label">Amount</span><span class="bb-input typed" data-fill="$4,200.00">$4,200.00</span></div>
+              <div class="bb-field"><span class="bb-label">Due date</span><span class="bb-input">2026-07-15</span></div>
+              <button class="bb-submit" id="bb-submit">Submit <span class="check">✓</span></button>
+              <span class="cursor" id="cursor" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.5L10 19z" fill="#1e1b2e" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="ripple" id="ripple" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="action-log" aria-hidden="true">
+            <div class="al-head"><span class="al-dot"></span> Agent action log</div>
+            <ul id="action-log-list">
+              <li data-step>→ Opened invoices.app</li>
+              <li data-step>→ Clicked “New invoice”</li>
+              <li data-step>→ Typed vendor “Northwind Co.”</li>
+              <li data-step>→ Typed amount $4,200.00</li>
+              <li data-step class="ok">→ Submitted ✓</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / trust strip -->
+    <section class="trust-strip" aria-label="Where Deskwright runs">
+      <div class="container trust-inner">
+        <span>Works on</span>
+        <ul>
+          <li>Salesforce</li><li>SAP</li><li>NetSuite</li><li>Citrix</li><li>Internal tools</li><li>Legacy desktop</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why RPA breaks -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The anti-RPA</span>
+          <h2>Why traditional RPA keeps breaking</h2>
+          <p class="section-sub">Robotic process automation promised hands-free workflows. Then it shattered against real software. Here is where it fails — and how Deskwright’s vision agents handle it instead.</p>
+        </div>
+        <div class="compare-grid">
+          <article class="compare-card reveal">
+            <h3>Brittle selectors</h3>
+            <p class="bad">RPA bots target exact DOM paths and pixel coordinates. Rename a field or move a button and the bot silently does the wrong thing.</p>
+            <p class="good"><strong>Deskwright</strong> reads the screen with vision and reasons about intent — it finds “Submit” even when it moves, restyles, or gets renamed.</p>
+          </article>
+          <article class="compare-card reveal">
+            <h3>No API for legacy apps</h3>
+            <p class="bad">Mainframe terminals, Citrix sessions, and old desktop suites expose no integration surface, so script-based tools can’t reach them cleanly.</p>
+            <p class="good"><strong>Deskwright</strong> operates through the real UI. If a person can use it on screen, the agent can drive it — zero integration required.</p>
+          </article>
+          <article class="compare-card reveal">
+            <h3>Scripts break on every change</h3>
+            <p class="bad">Each vendor update or UI refresh sends teams scrambling to re-record flows. Maintenance quietly eats the savings RPA promised.</p>
+            <p class="good"><strong>Deskwright</strong> self-heals through UI changes and asks a human when it’s unsure — so workflows stay live instead of breaking overnight.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-tint" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Product</span>
+          <h2>Built for software that wasn’t built for bots</h2>
+          <p class="section-sub">Vision and reasoning agents that use real interfaces the way your team does — only faster, around the clock, and fully auditable.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 5c-5 0-8.5 4.5-9.5 7 1 2.5 4.5 7 9.5 7s8.5-4.5 9.5-7C20.5 9.5 17 5 12 5z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+            </span>
+            <h3>Sees &amp; uses any UI</h3>
+            <p>Web, desktop, Citrix, or legacy green-screen. The agent perceives the screen and acts like a person — no API, plugin, or integration needed.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 3v4h-4M6 21v-4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Self-healing</h3>
+            <p>When buttons move or fields are renamed, the agent reasons its way to the goal instead of crashing — and flags real ambiguity for review.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <h3>Human-in-the-loop approvals</h3>
+            <p>Gate any step behind a person. The agent surfaces exactly what it will do — pay, delete, submit — and waits for approve, edit, or reject.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
+            </span>
+            <h3>Full session replay</h3>
+            <p>Watch every click, keystroke, and decision after the fact. Step through a run frame by frame for audit, debugging, or compliance.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Runs in your VPC</h3>
+            <p>Deploy inside your own cloud or on-prem. Data and credentials never leave your perimeter; you keep full control of scope and access.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="1.6" fill="currentColor"/><rect x="4" y="13" width="7" height="7" rx="1.6" fill="currentColor"/><rect x="13" y="13" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <h3>Pre-built workflow recipes</h3>
+            <p>Start from battle-tested recipes for reconciliation, data entry, migrations, and QA — then adapt them to your tools in plain language.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>From a goal to a finished workflow</h2>
+          <p class="section-sub">You describe the outcome. Deskwright perceives, plans, acts with the guardrails you set, and leaves a complete audit trail behind.</p>
+        </div>
+
+        <div class="how-grid">
+          <ol class="steps">
+            <li class="reveal"><span class="step-num">1</span><div><h3>Describe the goal</h3><p>Tell Deskwright the outcome in plain language or pick a recipe — “reconcile yesterday’s payments in NetSuite.”</p></div></li>
+            <li class="reveal"><span class="step-num">2</span><div><h3>Perceive &amp; plan</h3><p>The agent looks at the live screen, identifies the right controls, and plans the steps needed to reach the goal.</p></div></li>
+            <li class="reveal"><span class="step-num">3</span><div><h3>Act with approvals</h3><p>It clicks, types, and navigates at machine speed — pausing for human sign-off on the steps you’ve gated.</p></div></li>
+            <li class="reveal"><span class="step-num">4</span><div><h3>Replay &amp; audit</h3><p>Every action is recorded. Replay any run frame-by-frame and export a tamper-evident log for compliance.</p></div></li>
+          </ol>
+
+          <figure class="code-card reveal" aria-label="Example Deskwright workflow defined in YAML">
+            <figcaption class="code-head"><span class="traffic r"></span><span class="traffic y"></span><span class="traffic g"></span> reconcile-payments.yaml</figcaption>
+            <pre><code><span class="c-key">workflow</span>: reconcile-payments
+<span class="c-key">target</span>: <span class="c-str">"netsuite.app"</span>   <span class="c-com"># no API needed</span>
+<span class="c-key">goal</span>: <span class="c-str">"Match yesterday's bank deposits to open invoices"</span>
+
+<span class="c-key">steps</span>:
+  - <span class="c-key">open</span>: <span class="c-str">"Banking &gt; Match Deposits"</span>
+  - <span class="c-key">for_each</span>: deposit
+    <span class="c-key">do</span>:
+      - <span class="c-key">find_invoice</span>: { amount: <span class="c-str">"$deposit.amount"</span> }
+      - <span class="c-key">approve_if</span>: <span class="c-str">"amount &gt; 10000"</span>  <span class="c-com"># human gate</span>
+      - <span class="c-key">click</span>: <span class="c-str">"Match"</span>
+
+<span class="c-key">on_uncertain</span>: <span class="c-str">"ask_human"</span>
+<span class="c-key">replay</span>: <span class="c-bool">true</span></code></pre>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases -->
+    <section class="section section-tint" id="use-cases">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Use cases</span>
+          <h2>Put an agent on the work nobody wants to do by hand</h2>
+          <p class="section-sub">Repetitive, screen-bound, high-volume workflows are where computer-use agents shine. Metrics below are illustrative.</p>
+        </div>
+        <div class="usecase-grid">
+          <article class="usecase-card reveal">
+            <h3>Finance back-office &amp; reconciliation</h3>
+            <p>Match deposits to invoices, chase exceptions, and close the books across ERPs that never had an API worth using.</p>
+            <p class="metric"><span>10×</span> faster monthly close</p>
+          </article>
+          <article class="usecase-card reveal">
+            <h3>Data migration &amp; entry</h3>
+            <p>Move records between systems screen-by-screen when no clean export exists — accurately and overnight.</p>
+            <p class="metric"><span>50k+</span> records migrated per run</p>
+          </article>
+          <article class="usecase-card reveal">
+            <h3>QA &amp; regression testing</h3>
+            <p>Exercise real user journeys across releases without maintaining a wall of brittle selector-based tests.</p>
+            <p class="metric"><span>90%</span> less test maintenance</p>
+          </article>
+          <article class="usecase-card reveal">
+            <h3>Customer-ops &amp; back office</h3>
+            <p>Process refunds, update accounts, and handle case queues across the same tools your agents use today.</p>
+            <p class="metric"><span>24/7</span> queue coverage</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats band -->
+    <section class="stats-band" aria-label="Key results">
+      <div class="container stats-inner">
+        <div class="stat reveal"><span class="stat-num" data-count="10" data-suffix="×">0</span><span class="stat-label">Faster than manual work</span></div>
+        <div class="stat reveal"><span class="stat-num" data-count="0" data-suffix="">0</span><span class="stat-label">APIs required</span></div>
+        <div class="stat reveal"><span class="stat-num" data-count="100" data-suffix="%">0</span><span class="stat-label">Session replay coverage</span></div>
+        <div class="stat reveal"><span class="stat-num" data-count="100" data-suffix="+">0</span><span class="stat-label">Workflow recipes</span></div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Security &amp; trust</span>
+          <h2>Enterprise control, by default</h2>
+          <p class="section-sub">Agents that touch real systems demand real guardrails. Deskwright is built to run inside your perimeter, on your terms.</p>
+        </div>
+        <div class="security-grid">
+          <div class="sec-card reveal"><h3>Runs in your VPC</h3><p>Deploy in your own cloud or on-premises. No screens, credentials, or data leave your environment.</p></div>
+          <div class="sec-card reveal"><h3>Scoped credentials</h3><p>The agent uses least-privilege service accounts stored in your secrets manager — never hard-coded, always revocable.</p></div>
+          <div class="sec-card reveal"><h3>Human approvals</h3><p>Gate sensitive actions behind a person. Nothing irreversible happens without explicit sign-off.</p></div>
+          <div class="sec-card reveal"><h3>Full audit trail</h3><p>Every action is captured in a tamper-evident log with screen-by-screen replay for compliance and review.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-tint" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2>Start small, scale to the back office</h2>
+          <p class="section-sub">Transparent tiers that grow with the number of workflows and agent-hours you run.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3>Starter</h3>
+            <p class="price"><span>$0</span>/mo</p>
+            <p class="price-note">For a first workflow and a proof of value.</p>
+            <ul>
+              <li>1 active workflow</li>
+              <li>50 agent-hours / mo</li>
+              <li>Session replay</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#cta">Start free</a>
+          </article>
+          <article class="price-card featured reveal">
+            <span class="badge">Most popular</span>
+            <h3>Scale</h3>
+            <p class="price"><span>$2,400</span>/mo</p>
+            <p class="price-note">For teams running production back-office workflows.</p>
+            <ul>
+              <li>Unlimited workflows</li>
+              <li>1,500 agent-hours / mo</li>
+              <li>Human-in-the-loop approvals</li>
+              <li>VPC deployment</li>
+              <li>Priority support &amp; SLA</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#cta">Get a demo</a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Enterprise</h3>
+            <p class="price"><span>Custom</span></p>
+            <p class="price-note">For regulated, high-volume, multi-team deployments.</p>
+            <ul>
+              <li>Dedicated agent capacity</li>
+              <li>On-prem &amp; air-gapped options</li>
+              <li>SSO/SCIM &amp; audit exports</li>
+              <li>Custom recipes &amp; onboarding</li>
+              <li>24/7 enterprise support</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#cta">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What teams say</span>
+          <h2>Loved by the people doing the work</h2>
+          <p class="section-sub">Illustrative quotes from operations and finance leaders.</p>
+        </div>
+        <div class="quote-grid">
+          <figure class="quote-card reveal">
+            <blockquote>“We retired a wall of RPA scripts that broke every release. Deskwright just looks at the screen and gets it done — month-end close went from a week to an afternoon.”</blockquote>
+            <figcaption><span class="avatar">PM</span><span><strong>Priya Menon</strong><br>VP Finance, Lumen Retail</span></figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“Our core system is a 20-year-old desktop app with no API. Deskwright was the first thing that could actually automate it — and the replay log keeps audit happy.”</blockquote>
+            <figcaption><span class="avatar">DK</span><span><strong>Daniel Koch</strong><br>Head of Ops, Meridian Insurance</span></figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“The human-approval gates sold our risk team. The agent does 95% of the keystrokes and pauses for sign-off exactly where we need it.”</blockquote>
+            <figcaption><span class="avatar">SR</span><span><strong>Sofia Reyes</strong><br>Director of Shared Services, Atlas Health</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder / About -->
+    <section class="section section-tint" id="about">
+      <div class="container about-inner">
+        <div class="founder-avatar reveal" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="120" height="120">
+            <defs>
+              <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7c3aed" />
+                <stop offset="1" stop-color="#fb7185" />
+              </linearGradient>
+            </defs>
+            <rect width="120" height="120" rx="28" fill="url(#avatarGrad)" />
+            <text x="60" y="76" text-anchor="middle" font-family="Sora, sans-serif" font-size="46" font-weight="700" fill="#fff">MS</text>
+          </svg>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Founder</span>
+          <h2>Maharana Sarkar</h2>
+          <p class="role">Founder &amp; CEO</p>
+          <p class="bio">Maharana is a software engineer who spent years building tool-using, reasoning agents — “an agent that can drive the same software an analyst uses, at machine speed and machine scale.” He started Deskwright on a simple conviction: the last mile of automation isn’t another API, it’s the screen itself.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How is Deskwright different from traditional RPA?</summary>
+            <div class="faq-body"><p>Traditional RPA relies on recorded selectors and scripts that break the moment a button moves or a field is renamed. Deskwright uses vision and reasoning to see the screen like a person, so it adapts to UI changes and works on apps that expose no automation hooks at all.</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Does Deskwright need an API for the apps it automates?</summary>
+            <div class="faq-body"><p>No. Deskwright operates software through its real user interface — web, desktop, Citrix, or legacy mainframe terminals. If a human can use it on a screen, the agent can drive it. No integration or API access required.</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What happens when a user interface changes?</summary>
+            <div class="faq-body"><p>Because Deskwright perceives the screen and reasons about intent rather than memorizing pixel coordinates or DOM paths, it self-heals through most UI changes automatically. When it is genuinely uncertain, it pauses and asks a human instead of failing silently.</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How do you keep our data and credentials secure?</summary>
+            <div class="faq-body"><p>Deskwright runs inside your own VPC or on-premises environment. Credentials are scoped and stored in your secrets manager, sensitive steps require human approval, and every action is captured in a tamper-evident audit log with full session replay.</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can a human approve actions before they run?</summary>
+            <div class="faq-body"><p>Yes. You define approval gates on any step — for example before submitting a payment or modifying a record. The agent pauses, surfaces exactly what it intends to do, and waits for a person to approve, edit, or reject.</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How long does it take to deploy a workflow?</summary>
+            <div class="faq-body"><p>Most teams ship their first workflow in days using a pre-built recipe or by describing the goal in plain language. There are no selectors to record or scripts to maintain, so workflows go live faster and stay live longer.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-band" id="cta">
+      <div class="container cta-inner reveal">
+        <h2>See an agent drive <span class="grad-text">your software</span>.</h2>
+        <p>Bring one painful, screen-bound workflow. We’ll show you a Deskwright agent running it end-to-end — replay and approvals included.</p>
+        <form class="cta-form" onsubmit="return false;" aria-label="Request a demo">
+          <label class="sr-only" for="email">Work email</label>
+          <input id="email" type="email" name="email" placeholder="you@company.com" required />
+          <button class="btn btn-primary btn-lg" type="submit">Get a demo</button>
+        </form>
+        <p class="cta-fine">No credit card. Runs in your VPC. Cancel anytime.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Deskwright home">
+          <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="url(#brandGrad)" />
+            <path d="M11 9l12 7-12 7z" fill="#fff" />
+          </svg>
+          <span class="brand-name">Deskwright</span>
+        </a>
+        <p>Computer-use AI agents that drive your software. No API, no brittle scripts.</p>
+        <div class="socials" aria-label="Contact">
+          <a href="mailto:hello@deskwright.space" aria-label="Email Deskwright">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 6.5h18v11H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 7l8.5 6 8.5-6"/></svg>
+            <span>hello@deskwright.space</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#use-cases">Use cases</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Customers</a></li>
+          <li><a href="#cta">Contact</a></li>
+          <li><a href="#cta">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#how">Docs</a></li>
+          <li><a href="#features">Recipes</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">DPA</a></li>
+          <li><a href="#security">Trust</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Deskwright, Inc. All rights reserved.</p>
+      <p class="footer-note">Metrics and quotes shown are illustrative.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</htm
