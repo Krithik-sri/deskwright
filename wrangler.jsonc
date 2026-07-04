@@ -2,7 +2,7 @@
   // Static-assets-only Worker: `next build` (output: "export") emits the
   // site into out/, and wrangler uploads it as-is. No server code runs,
   // so the OpenNext/standalone auto-configuration must never kick in.
-  "name": "deskwright-prod",
+  "name": "deskwright",
   "compatibility_date": "2026-07-04",
   "assets": {
     "directory": "./out",
